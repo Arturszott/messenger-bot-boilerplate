@@ -27,10 +27,3 @@ curl -ik -X POST "https://graph.facebook.com/v2.6/me/subscribed_apps?access_toke
 ```
 
 Now you can run this service on your server and have your bot start responding to chats!
-
-To run the service in the background forever, use [forever](https://github.com/foreverjs/forever).
-```bash
-  $ [sudo] npm install forever -g
-  $ forever start index.js
-```
-
