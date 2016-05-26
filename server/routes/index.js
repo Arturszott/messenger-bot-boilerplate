@@ -20,6 +20,7 @@ export default () => {
 
   router.post('/webhook', (req, res) => {
     // If facebook sends us an empty body, we just ignore it.
+    console.log(req);
     if (!req.body || _.isEmpty(req.body)) {
       return res.sendStatus(204);
     }
