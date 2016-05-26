@@ -14,9 +14,8 @@
 
 At this point, create a `.env` file under this repository with the following format:
 ```yml
-APP_ACCESS_TOKEN=<enter your access token from step 3>",
-PAGE_VERIFY_TOKEN="<enter your verify token from step 2>"
-}
+APP_ACCESS_TOKEN=<enter your access token from step 3>
+PAGE_VERIFY_TOKEN="<enter your verify token from step 2>
 ```
 
 This file won't be uploaded to the repository, so while hosting the page on heroku you have to create those env variables again.
