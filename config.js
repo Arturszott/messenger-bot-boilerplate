@@ -1,6 +1,6 @@
-require('dotenv').config();
+require('dotenv').config({silent: true});
 
-return {
+export default {
   verifyToken: process.env.PAGE_TOKEN,
   accessToken: process.env.APP_ACCESS_TOKEN
 }
