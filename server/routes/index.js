@@ -9,6 +9,8 @@ export default () => {
 
   router.get('/webhook', (req, res) => {
     // Check if facebook passes us the correct verify token.
+    console.log(config);
+
     if (req.query['hub.verify_token'] === verifyToken) {
       res.send(req.query['hub.challenge']);
     } else {
