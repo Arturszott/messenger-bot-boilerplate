@@ -1,6 +1,6 @@
 import request from 'request';
 
-import secrets from '../../secrets.json'
+import config from '../../config.js'
 
 export function sendTextMessage(recipient, text) {
   const messageData = {
@@ -9,7 +9,7 @@ export function sendTextMessage(recipient, text) {
 
   request.post({
     url: 'https://graph.facebook.com/v2.6/me/messages',
-    qs: { access_token: secrets.accessToken },
+    qs: { access_token: config.accessToken },
     json: {
       recipient: { id: recipient },
       message: messageData

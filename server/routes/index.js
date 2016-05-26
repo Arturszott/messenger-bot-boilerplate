@@ -1,11 +1,11 @@
 import { _ } from 'lodash';
 import { Router } from 'express';
 import { sendTextMessage } from '../lib/messaging'
-import secrets from '../../secrets.json'
+import config from '../../config.js'
 
 export default () => {
   const router = Router();
-  const verifyToken = secrets.verifyToken;
+  const verifyToken = config.verifyToken;
 
   router.get('/webhook', (req, res) => {
     // Check if facebook passes us the correct verify token.
