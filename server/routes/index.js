@@ -34,7 +34,10 @@ export default () => {
         const senderId = message.sender.id;
 
         const contents = message.message;
+
+        console.log('received something: ', contents)
         if (contents && contents.text) {
+          console.log('sending Text message')
           sendTextMessage(senderId, contents.text);
         }
       });
